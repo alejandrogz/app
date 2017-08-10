@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="content/css/app.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-app="oktyBlog">
+  <!--<div ui-view="header"></div>-->
+  <div class="container" ui-view="header"></div>
+
+  <div class="container container-top" align="center">
+    <ul id="menu-tabs" class="nav nav-pills" style="width: 812px; padding-left: 70px; background-color: #F3F3F3;">
+      <li role="presentation" class="active"><a data-toggle="tab" href="#home">Home</a></li>
+      <li role="presentation"><a data-toggle="tab" href="#salesforce">Salesforce</a></li>
+      <li role="presentation"><a data-toggle="tab" href="#heroku">Heroku</a></li>
+      <li role="presentation"><a data-toggle="tab" href="#mobile">Mobile</a></li>
+      <li role="presentation"><a data-toggle="tab" href="#ux_ui">UX/UI</a></li>
+      <li role="presentation"><a data-toggle="tab" href="#scrapbook">Scrapbook</a></li>
+    </ul>
+  </div>
+  <div class="container tab-content" align="center">
+    <div id="home" class="tab-pane active" style="width: 812px; padding-left: 70px;">
+      <div ui-view="content"></div>
+    </div>
+    <div id="salesforce" class="tab-pane" style="width: 812px; padding-left: 70px;">
+      <div ui-view="content"></div>
+    </div>
+    <div id="heroku" class="tab-pane" style="width: 812px; padding-left: 70px;">
+      <div ui-view="content"></div>
+    </div>
+    <div id="mobile" class="tab-pane" style="width: 812px; padding-left: 70px;">
+        <div ui-view="content"></div>
+    </div>
+    <div id="ux_ui" class="tab-pane" style="width: 812px; padding-left: 70px;">
+      <div ui-view="content"></div>
+    </div>
+    <div id="scrapbook" class="tab-pane" style="width: 812px; padding-left: 70px;">
+      <div ui-view="content"></div>
+    </div>
+  </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="app.module.js"></script>
+  <script src="app.state.js"></script>
+  <script src="home/home.controller.js"></script>
+  <script src="home/home.state.js"></script>
+  <script src="heroku/heroku.state.js"></script>
+  <script src="mobile/mobile.state.js"></script>
+  <script src="salesforce/salesforce.state.js"></script>
+  <script src="scrapbook/scrapbook.state.js"></script>
+  <script src="ux_ui/ux_ui.state.js"></script>
+
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  
+</body>
+</html>

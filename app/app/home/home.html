@@ -1,0 +1,9 @@
+<div id="welcome">
+    <h3>WELCOME TO OKTYBLOG</h3>
+</div>
+<div id="{{tile.id}}"
+     class="disposition tile"
+     ng-repeat="tile in vm.tiles"
+     style="background-position: {{tile.background_position}}; height: {{tile.height}}"
+     ng-click="vm.gotoSalesforce(tile)">
+</div>
